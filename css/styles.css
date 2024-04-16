@@ -1,255 +1,255 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Space Grotesk", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Space Grotesk", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 body {
-  font-size: 16px;
-  overflow-x: hidden;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
-h1 {
-  font-size: 2.986rem;
+h1 {    
+    font-size: 2.986rem;
 }
 
 h2 {
-  font-size: 2.488rem;
+    font-size: 2.488rem;
 }
 
 h3 {
-  font-size: 2.074rem;
+    font-size: 2.074rem;
 }
 
 h4 {
-  font-size: 1.728rem;
+    font-size: 1.728rem;
 }
 
 h5 {
-  font-size: 1.44rem;
+    font-size: 1.44rem;
 }
 
 h6 {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 
 p {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 header,
 main,
 footer {
-  width: 100vw;
+    width: 100vw;
 }
 
 .container-header {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
 }
 
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: #fff;
 }
 
 .header-content {
-  max-width: 1290px;
-  margin: 0 auto;
+    max-width: 1290px;
+    margin: 0 auto;
 }
 
 .header-content {
-  padding: 12px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+    padding: 12px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-logo {
-  text-decoration: none;
-  color: #000;
-  font-size: 2.5rem;
-  font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 header nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all ease-in-out .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .3s;
 }
 
 header nav > div {
-  width: fit-content;
-  padding: 0 4px;
-  margin: 0 16px;
-  cursor: pointer;
-  color: #000;
-  font-size: 1.313rem;
-  line-height: 20px;
-  animation: slideInMenuTexts forwards ease-out;
-  animation-duration: 1s;
-  transform: translateY(-100%);
-  opacity: 0;
+    width: fit-content;
+    padding: 0 4px;
+    margin: 0 16px;
+    cursor: pointer;
+    color: #000;
+    font-size: 1.313rem;
+    line-height: 20px;
+    animation: slideInMenuTexts forwards ease-out;
+    animation-duration: 1s;
+    transform: translateY(-100%);
+    opacity: 0;
 }
 
 header nav > div::before, 
 header nav > div::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -6px;
-  background-color: #000;
-  transition: all 0.3s ease-in-out;
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -6px;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
 }
 
 header nav > div::before {
-  left: 0;
+    left: 0;
 }
 
 header nav > div::after {
-  right: 0;
+    right: 0;
 }
 
 header nav > div:hover::before,
 header nav > div:hover::after {
-  width: 50%;
+    width: 50%;
 }
 
 .firstMenuButton {
-  animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 .secondMenuButton {
-  animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 .thirdMenuButton {
-  animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 .banner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #7543ff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #7543ff;
 }
 
 .text-banner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1288px;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1288px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    user-select: none;
 }
 
 .text-banner .main-text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .text-banner span {
-  display: flex;
-  width: fit-content;
-  max-width: 60%;
+    display: flex;
+    width: fit-content;
+    max-width: 60%;
 }
 
 .action-button {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 1px solid #000;
-  cursor: pointer;
-  font-size: 0.906rem;
-  font-weight: 700;
-  line-height: 22px;
-  background-color: transparent;
-  color: #000;
-  transition: all ease-in-out .3s;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-size: 0.906rem;
+    font-weight: 700;
+    line-height: 22px;
+    background-color: transparent;
+    color: #000;
+    transition: all ease-in-out .3s;
 }
 
 .action-button:hover {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    color: #fff;
 }
 
 main {
-  height: 100vh;
+    height: 100vh;
 }
 
 .content-slider {
-  padding: 80px;
-  margin-bottom: 40px;
-  background-color: #f7f9fa;
-  width: 100vw;
+    padding: 80px;
+    margin-bottom: 40px;
+    background-color: #f7f9fa;
+    width: 100vw;
 }
 
 .text-lead {
-  font-size: 1.156rem;
-  line-height: 29.6px;
-  font-weight: 400;
-  text-align: center;
+    font-size: 1.156rem;
+    line-height: 29.6px;
+    font-weight: 400;
+    text-align: center;
 }
 
 #modules-slider {
-  width: 80%;
-  height: 72px;
-  display: flex;
-  padding: 16px;
+    width: 80%;
+    height: 72px;
+    display: flex;
+    padding: 16px;
 }
 
 #modules-slider .ls-slide {
-  display: flex;
+    display: flex;
 }
 
 #modules-slider .modules-collection {
-  display: flex;
-  height: 72px;
+    display: flex;
+    height: 72px;
 }
 
 #modules-slider .logo {
-  width: 132px;
-  height: 70px;
-  margin-right: 20px;
+    width: 132px;
+    height: 70px;
+    margin-right: 20px;
 }
 
 @keyframes slideInMenuTexts {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 
-  100% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 @keyframes moduleScroll {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
 
-  100% {
-    transform: translateX(-50%);
-  }
+    100% {
+        transform: translateX(-50%);
+    }
 }
