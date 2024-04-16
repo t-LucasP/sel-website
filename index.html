@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEL</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./js/layerslider/css/layerslider.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="container-header">
-      <header>
-        <div class="header-content">
-          <a href="#" class="header-logo"> LOGO </a>
-          <nav>
-            <div class="firstMenuButton">Soluções</div>
-            <div class="secondMenuButton">Quem somos</div>
-            <div class="thirdMenuButton">Blog</div>
-          </nav>
-          <button class="action-button">Faça parte</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SEL</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./js/layerslider/css/layerslider.css" />
+        <link rel="stylesheet" href="./css/styles.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/layoutappend/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/layoutappend/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/layoutappend/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/layoutappend/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/layoutappend/aos/aos.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-header">
+          <header>
+            <div class="header-content">
+              <a href="#" class="header-logo"> LOGO </a>
+              <nav>
+                <div class="firstMenuButton">Soluções</div>
+                <div class="secondMenuButton">Quem somos</div>
+                <div class="thirdMenuButton">Blog</div>
+            </nav>
+            <button class="action-button">Faça parte</button>
         </div>
-      </header>
-      <div class="banner">
-        <div class="text-banner">
-          <div class="main-text">
-            <div class="main-text-wrapper">
-              <h1 class="main-banner-title">
-                O poder da tecnologia na educação
-              </h1>
+        </header>
+        <div class="banner">
+            <div class="text-banner">
+                <h1 class="main-banner-title">
+                    <div class="main-text-wrapper">
+                        <h1>O poder da tecnologia na educação</h1>
+                    </div>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                        diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                        aliquam erat volutpat.
+                    </span>
+                </div>
             </div>
-            <span class="main-banner-text"
-              >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-              diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-              aliquam erat volutpat.
-            </span>
-          </div>
         </div>
+<<<<<<< HEAD
       </div>
     </div>
     <main>
@@ -72,29 +79,208 @@
       const allSecondTextWords = document.querySelectorAll(
         ".main-banner-text .word"
       );
+=======
+        </div>
+        <main>
+>>>>>>> 7ce6c754d2475a0c64d05dbdd7f583ebe6fc64d2
 
-      gsap.to(allTitleChars, {
-        y: 0,
-        stagger: 0.05,
-        delay: 0.2,
-        duration: 0.1,
-      });
+            <!-- CLIENTS SECTION -->
+            <section id="clients" class="clients">
 
-      gsap.to(allSecondTextWords, {
-        y: 0,
-        stagger: 0.05,
-        delay: 0.2,
-        duration: .1,
-      });
+                <div class="container-fluid" data-aos="fade-up">
 
-      lenis.on("scroll", (e) => {});
+                    <div class="row gy-4">
 
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
+                        <div class="col-xl-2 col-md-3 col-6 client-logo">
+                            <img src="assets/images/clients/client-1.png" class="img-fluid" alt="">
+                        </div><!-- End Client Item -->
 
-      requestAnimationFrame(raf);
-    </script>
-  </body>
+                        <div class="col-xl-2 col-md-3 col-6 client-logo">
+                          <img src="assets/images/clients/client-2.png" class="img-fluid" alt="">
+                        </div><!-- End Client Item -->
+
+                        <div class="col-xl-2 col-md-3 col-6 client-logo">
+                            <img src="assets/images/clients/client-3.png" class="img-fluid" alt="">
+                        </div><!-- End Client Item -->
+
+                        <div class="col-xl-2 col-md-3 col-6 client-logo">
+                            <img src="assets/images/clients/client-4.png" class="img-fluid" alt="">
+                        </div><!-- End Client Item -->
+
+                        <div class="col-xl-2 col-md-3 col-6 client-logo">
+                            <img src="assets/images/clients/client-5.png" class="img-fluid" alt="">
+                        </div><!-- End Client Item -->
+
+                        <div class="col-xl-2 col-md-3 col-6 client-logo">
+                            <img src="assets/images/clients/client-6.png" class="img-fluid" alt="">
+                        </div><!-- End Client Item -->
+
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- END CLIENTS SECTION  -->
+
+            <!-- ABOUT SECTION -->
+            <section id="about" class="about">
+                <div class="container container-about" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row align-items-xl-center gy-5">
+
+                        <div class="col-xl-5 content">
+                            <h3>About Us</h3>
+                            <h2>Ducimus rerum libero reprehenderit cumque</h2>
+                            <p>Ipsa sint sit. Quis ducimus tempore dolores impedit et dolor cumque alias maxime. Enim reiciendis minus et rerum hic non. Dicta quas cum quia maiores iure. Quidem nulla qui assumenda incidunt voluptatem tempora deleniti  soluta.</p>
+                            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                        </div>
+
+                        <div class="col-xl-7">                
+                            <div class="row gy-4 icon-boxes">
+
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="icon-box">
+                                        <i class="bi bi-buildings"></i>
+                                        <h3>Eius provident</h3>
+                                        <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
+                                    </div>
+                                </div> <!-- End Icon Box -->
+
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="icon-box">
+                                        <i class="bi bi-clipboard-pulse"></i>
+                                        <h3>Rerum aperiam</h3>
+                                        <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
+                                    </div>
+                                </div> <!-- End Icon Box -->
+
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="icon-box">
+                                        <i class="bi bi-command"></i>
+                                        <h3>Veniam omnis</h3>
+                                        <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
+                                    </div>
+                                </div> 
+                                <!-- End Icon Box -->
+
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="icon-box">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                        <h3>Delares sapiente</h3>
+                                        <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
+                                    </div>
+                                </div> <!-- End Icon Box -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+            <!-- END ABOUT SECTION -->
+
+            <div class="content-slider">
+                <h2 class="section-title text-lead">
+                    Módulos que o <b>PREPARA</b> oferta
+                </h2>
+                <div id="modules-slider">
+                    <div class="modules-collection">
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                        <img src="./assets/images/broken-image.png" class="logo" alt="Imagem do modulo" />
+                    </div>
+                </div>
+            </div>
+            <div id="layerslider">
+                <!-- Slide 1 -->
+                <div class="ls-slide" data-ls="slidedelay:5000;">
+                    <div class="parallax-layer" data-depth="0.2" style="background-image: url('./assets/images/broken-image.png')" ></div>
+                    <!-- Conteúdo do slide (pode incluir texto, imagens, etc.) -->
+                    <div class="slide-content">
+                        <h2>Slide 1</h2>
+                        <p>Conteúdo do Slide 1</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="ls-slide" data-ls="slidedelay:5000;">
+                    <div class="parallax-layer" data-depth="0.3" style="background-image: url('./assets/images/broken-image.png')" ></div>
+                    <!-- Conteúdo do slide (pode incluir texto, imagens, etc.) -->
+                    <div class="slide-content">
+                        <h2>Slide 2</h2>
+                        <p>Conteúdo do Slide 2</p>
+                    </div>
+                </div>
+            <!-- Adicione mais slides conforme necessário -->
+            </div>
+        </main>        
+        <!-- External libraries: jQuery & GreenSock -->
+        <script src="./js/layerslider/js/jquery.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/layoutappend/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/layoutappend/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/layoutappend/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/layoutappend/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/layoutappend/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/layoutappend/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/layoutappend/aos/aos.js"></script>
+        <script src="assets/vendor/layoutappend/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="./js/layoutappend.js"></script>
+
+        <!-- External libraries: jQuery & GreenSock -->      
+        <script>
+
+            $(document).ready(function () {
+                AOS.init();
+
+                /*
+                const lenis = new Lenis();
+                const mainTextSplit = new SplitType(".main-banner-title");
+                const mainSecondTextSplit = new SplitType(".main-banner-text");
+                const allTitleChars = document.querySelectorAll(
+                    ".main-text-wrapper .char"
+                );
+                const allSecondTextWords = document.querySelectorAll(
+                    ".main-banner-text .word"
+                );
+
+                gsap.to(allTitleChars, {
+                    y: 0,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duration: 0.1,
+                });
+
+                gsap.to(allSecondTextWords, {
+                    y: 0,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duration: .1,
+                });
+
+                lenis.on("scroll", (e) => {});
+
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+
+                requestAnimationFrame(raf);
+
+                */
+
+            });
+        </script>
+    </body>
 </html>
