@@ -7,7 +7,10 @@
         <title>SEL</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+          rel="stylesheet"
+        />
         <link rel="stylesheet" href="./js/layerslider/css/layerslider.css" />
         <link rel="stylesheet" href="./css/styles.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -34,7 +37,7 @@
         </header>
         <div class="banner">
             <div class="text-banner">
-                <div class="main-text">
+                <h1 class="main-banner-title">
                     <div class="main-text-wrapper">
                         <h1>O poder da tecnologia na educação</h1>
                     </div>
@@ -164,7 +167,7 @@
             <div id="layerslider">
                 <!-- Slide 1 -->
                 <div class="ls-slide" data-ls="slidedelay:5000;">
-                    <div class="parallax-layer" data-depth="0.2" style="background-image: url('./assets/images/broken-image.png')"></div>
+                    <div class="parallax-layer" data-depth="0.2" style="background-image: url('./assets/images/broken-image.png')" ></div>
                     <!-- Conteúdo do slide (pode incluir texto, imagens, etc.) -->
                     <div class="slide-content">
                         <h2>Slide 1</h2>
@@ -173,29 +176,79 @@
                 </div>
                 <!-- Slide 2 -->
                 <div class="ls-slide" data-ls="slidedelay:5000;">
-                    <div class="parallax-layer" data-depth="0.3" style="background-image: url('./assets/images/broken-image.png')"></div>
+                    <div class="parallax-layer" data-depth="0.3" style="background-image: url('./assets/images/broken-image.png')" ></div>
                     <!-- Conteúdo do slide (pode incluir texto, imagens, etc.) -->
                     <div class="slide-content">
                         <h2>Slide 2</h2>
                         <p>Conteúdo do Slide 2</p>
                     </div>
                 </div>
-                <!-- Adicione mais slides conforme necessário -->
+            <!-- Adicione mais slides conforme necessário -->
             </div>
-        </main>
+        </main>        
         <!-- External libraries: jQuery & GreenSock -->
-        <script src="./js/layerslider/js/jquery.js" type="text/javascript"></script>
-        <script src="./js/layerslider/js/greensock.js" type="text/javascript"></script>
+        <script src="./js/layerslider/js/jquery.js"></script>
+        <script src="https://unpkg.com/split-type"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 
-        <!-- LayerSlider script files -->
-        <script src="./js/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
-        <script src="./js/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript" ></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/layoutappend/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/layoutappend/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/layoutappend/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/layoutappend/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/vendor/layoutappend/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/layoutappend/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/layoutappend/aos/aos.js"></script>
+        <script src="assets/vendor/layoutappend/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="./js/layoutappend.js"></script>
+
+        <!-- External libraries: jQuery & GreenSock -->      
         <script>
+
             $(document).ready(function () {
                 AOS.init();
+
+                /*
+                const lenis = new Lenis();
+                const mainTextSplit = new SplitType(".main-banner-title");
+                const mainSecondTextSplit = new SplitType(".main-banner-text");
+                const allTitleChars = document.querySelectorAll(
+                    ".main-text-wrapper .char"
+                );
+                const allSecondTextWords = document.querySelectorAll(
+                    ".main-banner-text .word"
+                );
+
+                gsap.to(allTitleChars, {
+                    y: 0,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duration: 0.1,
+                });
+
+                gsap.to(allSecondTextWords, {
+                    y: 0,
+                    stagger: 0.05,
+                    delay: 0.2,
+                    duration: .1,
+                });
+
+                lenis.on("scroll", (e) => {});
+
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+
+                requestAnimationFrame(raf);
+
+                */
+
             });
         </script>
-        <script src="./js/layoutappend.js"></script>
     </body>
 </html>
