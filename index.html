@@ -635,15 +635,32 @@
       });
 
       $(document).ready(() => {
+        let width = document.body.clientWidth;
+        let height = document.body.clientHeight;
+
         let lastScrollTop = 0;
+        let onResizeHeight = function (e) {
+          width = e.target.outerWidth;
+          height = e.target.outerHeight;
+        };
+
+        window.addEventListener("resize", onResizeHeight);
 
         $(window).scroll((event) => {
           const scrollTop = $(this).scrollTop();
 
-          if (scrollTop > lastScrollTop) {
-            $(".main-header").css("top", "-100%");
+          if (height > 1322) {
+            if (scrollTop > lastScrollTop) {
+              $(".main-header").css("top", "-100%");
+            } else {
+              $(".main-header").css("top", "0");
+            }
           } else {
-            $(".main-header").css("top", "0");
+            if (window.scrollY != 0) {
+              $(".main-header").css("top", "-100%");
+            } else {
+              $(".main-header").css("top", "0");
+            }
           }
 
           lastScrollTop = scrollTop;

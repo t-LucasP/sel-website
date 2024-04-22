@@ -667,10 +667,6 @@ main {
   height: 60px;
 }
 
-.video-section {
-  min-height: 100vh;
-}
-
 .video-section-content {
   width: 100%;
   max-width: 1290px;
