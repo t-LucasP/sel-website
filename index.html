@@ -199,7 +199,7 @@
         </section>
         <section class="panel purple video-section">
           <div class="video-section-content">
-            <h3>
+            <h3 class="text-reveal">
               Capacitando todos os alunos para atingir todo seu
               <b>potencial</b>
             </h3>
@@ -631,6 +631,20 @@
           start: "top center",
           end: "30% center",
           stagger: 0.9,
+        },
+      });
+
+      gsap.from(".video-container", {
+        y: "100px",
+        opacity: 0,
+        delay: 0.1,
+        duration: 0.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: ".video-section",
+          scrub: true,
+          start: "top center",
+          end: "bottom center",
         },
       });
 
