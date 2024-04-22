@@ -8,6 +8,14 @@
   text-rendering: optimizeLegibility;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #7543ff;
+}
+
 body {
   font-size: 16px;
   overflow-x: hidden;
@@ -54,11 +62,16 @@ footer {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
+  transform: translateY(-100%);
+  opacity: 0;
   background-color: #fff;
+  animation: headerEnter 0.3s 0.1s forwards ease-in;
+  transition: all ease-in-out 0.3s;
+  transition: top ease-in-out 0.5s;
 }
 
 .header-content {
@@ -97,7 +110,8 @@ header nav > div {
   color: #000;
   font-size: 1.313rem;
   line-height: 20px;
-  animation: slideInMenuTexts forwards ease-out;
+  animation-delay: 5s;
+  animation: slideInMenuTexts forwards ease-in;
   animation-duration: 1s;
   transform: translateY(-100%);
   opacity: 0;
@@ -140,10 +154,11 @@ header nav > div:hover::after {
 }
 
 .banner {
-  width: 100%;
+  width: 0;
   height: 100%;
   position: absolute;
   background-color: #7543ff;
+  transition: 0.3s;
 }
 
 .text-banner {
@@ -151,7 +166,7 @@ header nav > div:hover::after {
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 100vw;
   max-width: 1288px;
   color: #fff;
   text-align: center;
@@ -251,6 +266,7 @@ main {
 .main-text-wrapper,
 .main-banner-text {
   overflow: hidden;
+  width: 100%;
 }
 
 .main-banner-title .char {
@@ -268,9 +284,114 @@ main {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   position: relative;
+  padding: 90px 0;
+}
+
+.banners-wrapper {
+  width: 70%;
+  max-width: 1290px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.features-banners-container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+.features-banners-container input {
+  display: none;
+}
+
+.features-banners-container input:checked + label {
+  width: 600px;
+}
+
+.feature-card {
+  width: 80px;
+  border-radius: 0.75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.feature-card > .feature-row {
+  color: #fff;
+  display: flex;
+  flex-wrap: nowrap;
+  transition: all ease 0.3s;
+}
+
+.feature-card > .feature-row > .feature-icon {
+  background: #233;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.feature-card > .feature-row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 520px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease;
+}
+
+.features-banners-container input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.features-banners-container input:checked + label .feature-row {
+  background-color: #233;
+}
+
+.feature-card > .feature-row > .description h4 {
+  text-transform: uppercase;
+}
+
+.feature-card > .feature-row > .description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.feature-card[for="c1"] {
+  background-image: url("../assets/images/banners/AI-intervention.jpg");
+}
+
+.feature-card[for="c2"] {
+  background-image: url("../assets/images/banners/AI-know.jpg");
+}
+
+.feature-card[for="c3"] {
+  background-image: url("../assets/images/banners/trilhas.jpg");
+}
+
+.feature-card[for="c4"] {
+  background-image: url("../assets/images/banners/relatorios.jpg");
 }
 
 .features #features-sliders {
@@ -291,6 +412,16 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 12px;
+}
+
+.features-text-title {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.features-text-default-texts {
+  transform: translateY(100px);
+  opacity: 0;
 }
 
 .features #features-content b {
@@ -377,7 +508,8 @@ main {
 
 #solutions {
   width: 500%;
-  height: 100%;
+  height: 100vh !important;
+  max-height: 100vh !important;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -416,10 +548,6 @@ main {
 
 .students-features {
   background-color: #15253a;
-}
-
-.purple {
-  background-color: purple;
 }
 
 .students-features-cards,
@@ -539,11 +667,97 @@ main {
   height: 60px;
 }
 
+.video-section {
+  min-height: 100vh;
+}
+
+.video-section-content {
+  width: 100%;
+  max-width: 1290px;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 56px;
+}
+
+.video-section-content h3 {
+  max-width: 70%;
+}
+
+.video-section-content h3 b {
+  color: #7543ff;
+}
+
+.video-container {
+  width: 95%;
+  height: 500px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: grayscale(0.9);
+  z-index: 1;
+  transition: all ease-in-out 0.3s;
+}
+
+.play-button {
+  background-color: #15253a;
+  border: none;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-50%, -50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.3s;
+}
+
+.play-button img {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(238deg)
+    brightness(103%) contrast(103%);
+  width: 24px;
+  height: 24px;
+  transition: all ease-in-out 0.3s;
+}
+
+.video-container:hover > img {
+  filter: grayscale(0.3);
+}
+
+.video-container:hover > .play-button {
+  background-color: #fff !important;
+  scale: 1.1;
+}
+
+.video-container:hover > .play-button > img {
+  filter: none;
+}
+
 #formation {
   width: 100vw;
   height: auto;
   background-color: #15253a;
   padding: 85px 0;
+  position: relative;
 }
 
 .formation-content {
@@ -782,8 +996,8 @@ main {
 }
 
 .help-button:hover {
-  transform: scale(1.1);
-  opacity: 0.8;
+  transform: scale(1.1) !important;
+  opacity: 0.8 !important;
 }
 
 footer {
@@ -805,6 +1019,18 @@ footer {
 }
 
 @keyframes slideInMenuTexts {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes headerEnter {
   0% {
     transform: translateY(-100%);
     opacity: 0;
