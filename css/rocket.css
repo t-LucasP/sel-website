@@ -126,6 +126,12 @@
   animation: raining 4s linear infinite both -1s;
 }
 
+#canvas {
+  position: absolute;
+  right: 0;
+  width: fit-content;
+}
+
 @keyframes raining {
   from {
     transform: translateY(-1200px);

@@ -432,6 +432,38 @@ main {
   color: #f72887;
 }
 
+.next-level-section-content {
+  width: 100%;
+  height: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: absolute;
+  z-index: 2;
+}
+
+.next-level-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  width: 70%;
+}
+
+.next-level-line {
+  width: 0%;
+  max-width: 30%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.next-level-title-text {
+  text-align: left !important;
+}
+
 /* /////////////////////////////// */
 #slider-container {
   width: 820px;
@@ -547,7 +579,7 @@ main {
 }
 
 .students-features {
-  background-color: #15253a;
+  background-color: #1a032b;
 }
 
 .students-features-cards,

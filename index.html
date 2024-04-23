@@ -176,7 +176,20 @@
             </div>
           </div>
         </div>
-        <section class="panel students-features red">
+        <section class="panel students-features">
+          <div class="next-level-section-content">
+            <div class="next-level-title">
+              <div class="next-level-line"></div>
+              <h4 class="next-level-title-text">
+                Nossas atividades educacionais estão em uma esfera própria, onde
+                a excelência é a norma e a inovação nos leva a explorar
+                fronteiras desconhecidas.
+              </h4>
+            </div>
+          </div>
+          <!-- <div class="fire-wrapper">
+            <img class="fire" src="./assets/images/rocket/fire.svg" />
+          </div> -->
           <div class="rain rain1"></div>
           <div class="rain rain2">
             <div class="drop drop2"></div>
@@ -196,6 +209,7 @@
           <div class="rain rain10"></div>
           <div class="drop drop11"></div>
           <div class="drop drop12"></div>
+          <div id="canvas"></div>
         </section>
         <section class="panel purple video-section">
           <div class="video-section-content">
@@ -458,6 +472,9 @@
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
+    <script src="https://unpkg.com/three@0.123.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.123.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="./js/rocket.js"></script>
     <!-- External libraries: jQuery & GreenSock -->
     <script>
       const lenis = new Lenis();
@@ -645,6 +662,19 @@
           scrub: true,
           start: "top center",
           end: "bottom center",
+        },
+      });
+
+      gsap.to(".next-level-line", {
+        width: "30%",
+        delay: 0.1,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".students-features",
+          scrub: true,
+          start: "top center",
+          end: "450% center",
         },
       });
 
