@@ -75,7 +75,7 @@ const createLights = () => {
   scene.add(ambientLight, directionalLight, pointLight);
 };
 
-const targetRocketPosition = 40;
+const targetRocketPosition = 30;
 const animationDuration = 2000;
 
 const loop = () => {
@@ -85,7 +85,7 @@ const loop = () => {
 
   const delta = targetRocketPosition * Math.sin(Math.PI * 2 * t);
   if (rocket) {
-    rocket.rotation.y += 0;
+    rocket.rotation.y += 0.02;
     rocket.position.y = delta;
   }
 
