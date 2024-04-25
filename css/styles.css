@@ -143,6 +143,24 @@ header nav > div:hover::after {
 
 .firstMenuButton {
   animation-delay: 0s;
+  position: relative;
+}
+
+.solutionsMenu {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-direction: column;
+  top: 200px;
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+
+.firstMenuButton:hover > .solutionsMenu {
+  top: 0px;
+  opacity: 1;
 }
 
 .secondMenuButton {
@@ -620,6 +638,12 @@ main {
   -webkit-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.35);
   box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.35);
+  transition: all ease-in-out 0.3s;
+}
+
+.parent-card:hover {
+  transform: scale(1.1) !important;
+  cursor: pointer;
 }
 
 .parents-features-cards {

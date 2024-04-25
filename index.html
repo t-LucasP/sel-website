@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PREPARA</title>
+    <title>SEL</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,11 +24,18 @@
     <div class="container-header">
       <header class="main-header">
         <div class="header-content">
-          <a href="#" class="header-logo"> PREPARA </a>
+          <a href="#" class="header-logo"> SEL </a>
           <nav>
-            <div class="firstMenuButton">Soluções</div>
+            <div class="firstMenuButton">
+              Soluções
+              <div class="solutionsMenu">
+                <div class="solutionsMenuItem">Teste</div>
+                <div class="solutionsMenuItem">Teste</div>
+                <div class="solutionsMenuItem">Teste</div>
+              </div>
+            </div>
             <div class="secondMenuButton">Quem somos</div>
-            <div class="thirdMenuButton">Blog</div>
+            <div class="thirdMenuButton">Contato</div>
           </nav>
           <button class="action-button">Faça parte</button>
         </div>
@@ -105,16 +112,17 @@
           </div>
         </div>
         <div id="features-content">
-          <h3 class="features-text-title">Features</h3>
+          <h3 class="features-text-title">Soluções</h3>
           <b class="features-text-default-texts"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <i>Veritatis maxime vitae!</i></b
-          >
+            >A SEL oferece um conjuto completo de soluções para elevar a
+            <i>educação</i> à um outro nível
+          </b>
           <span class="features-text-default-texts"
-            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
-            veritatis suscipit cumque, placeat, molestias eius quae mollitia
-            nulla possimus qui est nihil unde consectetur, optio necessitatibus
-            deserunt. Earum, eaque quos.</span
+            >Revitalize o ensino com nossas soluções tecnológicas educacionais,
+            projetadas para inspirar e capacitar alunos em qualquer lugar. Desde
+            a sala de aula até o ensino remoto, oferecemos ferramentas
+            inovadoras para promover um aprendizado envolvente e colaborativo,
+            moldando o futuro da educação</span
           >
         </div>
       </div>
@@ -122,12 +130,12 @@
         <div class="first-description panel">
           <div class="panel-content">
             <h3 class="text-reveal">
-              Todos os <b>recursos</b> que você procura:
+              Todos os <b>módulos</b> que você procura:
             </h3>
             <div class="parents-features-cards">
               <div class="left-cards cards-wrapper">
                 <div class="parent-card">
-                  <h4>Material didático</h4>
+                  <h4>Recursos</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sed, dolorum natus? Ad commodi architecto soluta omnis,
@@ -138,7 +146,7 @@
                   <img src="./assets/images/gif-example.webp" />
                 </div>
                 <div class="parent-card">
-                  <h4>Biblioteca digital</h4>
+                  <h4>Atividades</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sed, dolorum natus? Ad commodi architecto soluta omnis,
@@ -151,7 +159,7 @@
               </div>
               <div class="right-cards cards-wrapper">
                 <div class="parent-card">
-                  <h4>Avaliações</h4>
+                  <h4>Comunicação</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sed, dolorum natus? Ad commodi architecto soluta omnis,
@@ -162,7 +170,7 @@
                   <img src="./assets/images/gif-example.webp" />
                 </div>
                 <div class="parent-card">
-                  <h4>Simulados</h4>
+                  <h4>Formação</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                     Sed, dolorum natus? Ad commodi architecto soluta omnis,
@@ -242,17 +250,17 @@
           <div class="evolution-numbers-container">
             <div class="evolution-number">
               <img src="./assets/images/icon01.png" />
-              <span id="counter01" class="counter">5,500+</span>
+              <span id="counter01" class="counter" data-count="5,500"></span>
               <span>recursos digitais</span>
             </div>
             <div class="evolution-number">
               <img src="./assets/images/icon02.png" />
-              <span id="counter02" class="counter">140,000+</span>
+              <span id="counter02" class="counter" data-count="140,000"></span>
               <span>Materiais disponíveis</span>
             </div>
             <div class="evolution-number">
               <img src="./assets/images/icon03.png" />
-              <span id="counter03" class="counter">3,200+</span>
+              <span id="counter03" class="counter" data-count="3,200"></span>
               <span>Avaliações</span>
             </div>
           </div>
@@ -510,6 +518,9 @@
       const featuresTexts = gsap.utils.toArray(".features-text-default-texts");
       const featuresCards = gsap.utils.toArray(".feature-card");
       const splitTypes = document.querySelectorAll(".text-reveal");
+      const counters = document.querySelectorAll(".counter");
+      const countersContainer = document.querySelector("#evolution");
+      let activated = false;
 
       splitTypes.forEach((char, i) => {
         const splitTypeText = new SplitType(char, {
@@ -711,6 +722,45 @@
             } else {
               $(".main-header").css("top", "0");
             }
+          }
+
+          if (
+            pageYOffset >
+              countersContainer.offsetTop - container.offsetHeight - 200 &&
+            !activated
+          ) {
+            counters.forEach((counter) => {
+              counter.innerText = 0;
+
+              let count = 0;
+
+              function updateCount() {
+                const target = parseInt(counter.dataset.count);
+
+                if (count < target) {
+                  count++;
+                  count.innetText = count;
+                  setTimeout(updateCount, 10);
+                } else {
+                  counter.innerText = target;
+                }
+              }
+
+              updateCount();
+
+              activated = true;
+            });
+          } else if (
+            pageYOffset <
+              countersContainer.offsetTop -
+                countersContainer.offsetHeight -
+                500 ||
+            (pageYOffset === 0 && activated)
+          ) {
+            counters.forEach((counter) => {
+              counter.innerText = 0;
+            });
+            activated = false;
           }
 
           lastScrollTop = scrollTop;
