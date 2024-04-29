@@ -25,18 +25,25 @@
       <header class="main-header">
         <div class="header-content">
           <a href="#" class="header-logo"> SEL </a>
-          <nav>
-            <div class="firstMenuButton">
-              Soluções
-              <div class="solutionsMenu">
-                <div class="solutionsMenuItem">Teste</div>
-                <div class="solutionsMenuItem">Teste</div>
-                <div class="solutionsMenuItem">Teste</div>
+          <div class="navbar">
+            <div class="dropdown">
+              <button class="dropbtn">
+                Soluções
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone de seta para baixo"
+                />
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Linha 1</a>
+                <a href="#">Linha 2</a>
+                <a href="#">Linha 3</a>
               </div>
             </div>
-            <div class="secondMenuButton">Quem somos</div>
-            <div class="thirdMenuButton">Contato</div>
-          </nav>
+            <a href="#aboutus">Quem Somos</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contato</a>
+          </div>
           <button class="action-button">Faça parte</button>
         </div>
       </header>
@@ -58,6 +65,69 @@
       </div>
     </div>
     <main>
+      <div id="aboutus">
+        <div class="aboutus-content">
+          <div class="aboutus-title-section">
+            <h2>Sobre a <span>SEL</span></h2>
+          </div>
+          <div class="aboutus-main-content">
+            <div class="aboutus-main-content-text">
+              <div class="general-overview about-section">
+                <h4>Visão geral</h4>
+                <p>
+                  Somos uma instituição dedicada ao desenvolvimento, capacitação
+                  e implementação de soluções inovadoras em Tecnologia
+                  Educacional. Com uma equipe de profissionais experientes em
+                  diferentes áreas educacionais, concentramos nossas atividades
+                  em Educação, Projetos e Consultorias em Tecnologia
+                  Educacional.
+                </p>
+              </div>
+              <div class="mission about-section">
+                <h4>Missão</h4>
+                <p>
+                  Na SEL, nossa missão é facilitar o uso eficaz da tecnologia na
+                  educação, promovendo um ambiente de aprendizagem inovador e
+                  engajador.
+                </p>
+              </div>
+              <div class="mission about-section">
+                <h4>Compromisso</h4>
+                <p>
+                  Na Educar/SEL Brasil, integramos tecnologia e educação para
+                  melhorar a aprendizagem e elevar a qualidade do ensino em
+                  escolas e redes de ensino básico.
+                </p>
+              </div>
+            </div>
+            <img
+              src="./assets/images/tech-and-educ.jpg"
+              alt="Imagem de uma garota utilizando tecnologia de realizade aumentada"
+            />
+          </div>
+          <div class="plus-about-section">
+            <div class="divide-section-title">
+              <div class="divider-left-line divider"></div>
+              <h6>Por que se juntar a nós</h6>
+              <div class="divider-right-line divider"></div>
+            </div>
+            <div class="plus-section-main-content">
+              <div class="plus-section-card">
+                <span class="plus-section-number stroke-text">1</span>
+                <span>Desenvolvimento de Portal de Conteúdos Pedagógicos </span>
+              </div>
+              <div class="plus-section-card">
+                <span class="plus-section-number stroke-text">2</span>
+                <span>Consultoria em Tecnologia Educacional </span>
+              </div>
+              <div class="plus-section-card">
+                <span class="plus-section-number stroke-text">3</span>
+                <span>Implementação de Sala de Aula Interativa </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="features">
         <div class="banners-wrapper">
           <div class="features-banners-container">
@@ -189,20 +259,11 @@
             <div class="next-level-title">
               <div class="next-level-line"></div>
               <h4 class="next-level-title-text">
-                Nossas atividades educacionais estão em uma esfera própria, onde
-                a excelência é a norma e a inovação nos leva a explorar
-                fronteiras desconhecidas.
+                Alavanque seu potencial educacional com nossos Dashboards: O
+                foguete para impulsionar a excelência em seus projetos
+                educacionais!
               </h4>
             </div>
-            <!-- <div class="next-level-cards-container">
-              <div class="next-level-card">
-                <div class="next-level-card-overlay"></div>
-                <div class="next-level-card-circle">
-                  <img src="" alt="Ícone atividade" />
-                </div>
-                <p class="next-level-card-title">Biblioteca Digital</p>
-              </div>
-            </div> -->
           </div>
           <div class="rain rain1"></div>
           <div class="rain rain2">
@@ -225,23 +286,142 @@
           <div class="drop drop12"></div>
           <div id="canvas"></div>
         </section>
-        <section class="panel purple video-section">
-          <div class="video-section-content">
-            <h3 class="text-reveal-video">
-              Capacitando todos os alunos para atingir todo seu
-              <b>potencial</b>
-            </h3>
-            <div class="video-container">
-              <button class="play-button">
-                <img
-                  class="play-icon"
-                  src="./assets/images/icons/play-icon.svg"
-                />
+        <section class="panel dashboard-contents">
+          <div class="dashboards-expose-content">
+            <div class="dashboards-expose-title">
+              <span>Toda a gestão na palma da sua mão</span>
+              <h3>
+                Maximize a efetividade de seus projetos educacionais com nossos
+                Dashboards de alto desempenho.
+              </h3>
+            </div>
+            <div class="next-level-content-buttons">
+              <button
+                class="next-level-button"
+                onclick="changeDashboardContent(this)"
+                data-content="dashboards"
+              >
+                Dashboards Interativos
               </button>
-              <img src="./assets/images/school-bg.jpg" class="video-thumb" />
+              <button
+                class="next-level-button"
+                onclick="changeDashboardContent(this)"
+                data-content="reports"
+              >
+                Relatórios
+              </button>
+              <button
+                class="next-level-button"
+                onclick="changeDashboardContent(this)"
+                data-content="acess"
+              >
+                Gestão de Acessos
+              </button>
+              <button
+                class="next-level-button"
+                onclick="changeDashboardContent(this)"
+                data-content="unkown"
+              >
+                Gestão de Acessos
+              </button>
+            </div>
+            <div
+              class="next-level-expose-content expose-content"
+              id="dashboards"
+            >
+              <div class="next-level-expose-content-text">
+                <h5>
+                  Eleve sua gestão educacional com nossos Dashboards intuitivos
+                  e precisos, oferecendo insights poderosos em apenas um clique
+                </h5>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, ratione atque amet eaque voluptatem placeat
+                  numquam perferendis repellat eligendi asperiores quaerat illum
+                  voluptate culpa et reiciendis, optio cumque voluptas
+                  iusto!</span
+                >
+              </div>
+              <img
+                loading="lazy"
+                src="./assets/images/dashboard-bg.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="next-level-expose-content expose-content"
+              id="reports"
+              style="display: none"
+            >
+              <div class="next-level-expose-content-text">
+                <h5>
+                  Transforme dados em insights poderosos para impulsionar suas
+                  estratégias e tomar decisões informadas com confiança.
+                </h5>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, ratione atque amet eaque voluptatem placeat
+                  numquam perferendis repellat eligendi asperiores quaerat illum
+                  voluptate culpa et reiciendis, optio cumque voluptas
+                  iusto!</span
+                >
+              </div>
+              <img
+                loading="lazy"
+                src="./assets/images/dashboard-2.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="next-level-expose-content expose-content"
+              id="acess"
+              style="display: none"
+            >
+              <div class="next-level-expose-content-text">
+                <h5>
+                  Garanta a segurança e a integridade dos seus sistemas,
+                  concedendo permissões de forma precisa e monitorando
+                  atividades com transparência
+                </h5>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, ratione atque amet eaque voluptatem placeat
+                  numquam perferendis repellat eligendi asperiores quaerat illum
+                  voluptate culpa et reiciendis, optio cumque voluptas
+                  iusto!</span
+                >
+              </div>
+              <img
+                loading="lazy"
+                src="./assets/images/dashboard-3.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="next-level-expose-content expose-content"
+              id="unkown"
+              style="display: none"
+            >
+              <div class="next-level-expose-content-text">
+                <h5>
+                  Eleve sua gestão educacional com nossos Dashboards intuitivos
+                  e precisos, oferecendo insights poderosos em apenas um clique
+                </h5>
+                <span
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Exercitationem, ratione atque amet eaque voluptatem placeat
+                  numquam perferendis repellat eligendi asperiores quaerat illum
+                  voluptate culpa et reiciendis, optio cumque voluptas
+                  iusto!</span
+                >
+              </div>
+              <img
+                loading="lazy"
+                src="./assets/images/dashboard-bg.jpg"
+                alt=""
+              />
             </div>
           </div>
-          <div class="bg"></div>
         </section>
       </div>
       <div id="evolution">
@@ -250,17 +430,17 @@
           <div class="evolution-numbers-container">
             <div class="evolution-number">
               <img src="./assets/images/icon01.png" />
-              <span id="counter01" class="counter" data-count="5,500"></span>
+              <span id="counter01" class="counter" data-count="5.500"></span>
               <span>recursos digitais</span>
             </div>
             <div class="evolution-number">
               <img src="./assets/images/icon02.png" />
-              <span id="counter02" class="counter" data-count="140,000"></span>
+              <span id="counter02" class="counter" data-count="140.000"></span>
               <span>Materiais disponíveis</span>
             </div>
             <div class="evolution-number">
               <img src="./assets/images/icon03.png" />
-              <span id="counter03" class="counter" data-count="3,200"></span>
+              <span id="counter03" class="counter" data-count="3.200"></span>
               <span>Avaliações</span>
             </div>
           </div>
@@ -457,6 +637,130 @@
           </div>
         </div>
       </div>
+      <div id="faq">
+        <div class="faq-container">
+          <div class="section-title-card">
+            <div class="section-card-box">FAQ</div>
+            <h2>Perguntas e respostas frequentes</h2>
+          </div>
+          <div class="questions-wrapper">
+            <div class="question-container">
+              <div class="question-header">
+                <div class="question-number-title">
+                  <span class="question-number">01 .</span>
+                  <span class="question">O que é a SEL ?</span>
+                </div>
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone seta para baixo"
+                />
+              </div>
+              <div class="question-answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, quasi consequatur perspiciatis odio voluptate
+                maiores obcaecati, rerum cumque laudantium totam delectus
+                suscipit assumenda voluptatum nostrum! Sequi ipsum id illo
+                repellendus.
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="question-header">
+                <div class="question-number-title">
+                  <span class="question-number">02 .</span>
+                  <span class="question">Para quem é indicado ?</span>
+                </div>
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone seta para baixo"
+                />
+              </div>
+              <div class="question-answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, quasi consequatur perspiciatis odio voluptate
+                maiores obcaecati, rerum cumque laudantium totam delectus
+                suscipit assumenda voluptatum nostrum! Sequi ipsum id illo
+                repellendus.
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="question-header">
+                <div class="question-number-title">
+                  <span class="question-number">03 .</span>
+                  <span class="question">Como funciona ?</span>
+                </div>
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone seta para baixo"
+                />
+              </div>
+              <div class="question-answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, quasi consequatur perspiciatis odio voluptate
+                maiores obcaecati, rerum cumque laudantium totam delectus
+                suscipit assumenda voluptatum nostrum! Sequi ipsum id illo
+                repellendus.
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="question-header">
+                <div class="question-number-title">
+                  <span class="question-number">04 .</span>
+                  <span class="question">Qual o valor ?</span>
+                </div>
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone seta para baixo"
+                />
+              </div>
+              <div class="question-answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, quasi consequatur perspiciatis odio voluptate
+                maiores obcaecati, rerum cumque laudantium totam delectus
+                suscipit assumenda voluptatum nostrum! Sequi ipsum id illo
+                repellendus.
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="question-header">
+                <div class="question-number-title">
+                  <span class="question-number">05 .</span>
+                  <span class="question">Em quais segmentos a SEL atua ?</span>
+                </div>
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone seta para baixo"
+                />
+              </div>
+              <div class="question-answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, quasi consequatur perspiciatis odio voluptate
+                maiores obcaecati, rerum cumque laudantium totam delectus
+                suscipit assumenda voluptatum nostrum! Sequi ipsum id illo
+                repellendus.
+              </div>
+            </div>
+            <div class="question-container">
+              <div class="question-header">
+                <div class="question-number-title">
+                  <span class="question-number">06 .</span>
+                  <span class="question">Ainda com dúvidas...</span>
+                </div>
+                <img
+                  src="./assets/images/icons/24px/chevron-down.svg"
+                  alt="Ícone seta para baixo"
+                />
+              </div>
+              <div class="question-answer">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, quasi consequatur perspiciatis odio voluptate
+                maiores obcaecati, rerum cumque laudantium totam delectus
+                suscipit assumenda voluptatum nostrum! Sequi ipsum id illo
+                repellendus.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div id="help">
         <div class="help-content">
           <span class="help-span"
@@ -474,18 +778,12 @@
     </main>
     <!-- External libraries: jQuery & GreenSock -->
     <script src="./js/layerslider/js/jquery.js"></script>
-    <script src="./js/counterjs/jquery.easing.js"></script>
-    <script src="./js/counterjs/counter.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-    <script
-      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-      type="module"
-    ></script>
     <script src="https://unpkg.com/three@0.123.0/build/three.min.js"></script>
     <script src="https://unpkg.com/three@0.123.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="./js/rocket.js"></script>
@@ -501,6 +799,24 @@
       }
 
       requestAnimationFrame(raf);
+
+      function toggleMenu() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+      }
+
+      function changeDashboardContent(e) {
+        const currentTargetContent = e.dataset.content;
+        const currentVisibleElementID = $(".expose-content:visible")[0].id;
+
+        $(`#${currentVisibleElementID}`).css("display", "none");
+
+        $(`#${currentTargetContent}`).css("display", "flex");
+      }
 
       gsap.registerPlugin(ScrollTrigger);
       const mainTextSplit = new SplitType(".main-banner-title");
@@ -519,7 +835,8 @@
       const featuresCards = gsap.utils.toArray(".feature-card");
       const splitTypes = document.querySelectorAll(".text-reveal");
       const counters = document.querySelectorAll(".counter");
-      const countersContainer = document.querySelector("#evolution");
+      const countersContainer = document.querySelector(".evolution-content");
+      const questionContainers = gsap.utils.toArray(".question-container");
       let activated = false;
 
       splitTypes.forEach((char, i) => {
@@ -587,14 +904,15 @@
 
       gsap.to(parentCards, {
         y: 0,
+        opacity: 1,
         ease: "power2.out",
-        stagger: 0.05,
-        delay: 0.2,
+        stagger: 0.5,
+        delay: 0.1,
         duration: 0.5,
         scrollTrigger: {
-          trigger: ".parents-features-cards",
+          trigger: ".first-description panel",
           scrub: 0.1,
-          start: "-300% center",
+          start: "100% center",
           end: "bottom center",
         },
       });
@@ -683,15 +1001,44 @@
       });
 
       gsap.to(".next-level-line", {
-        width: "30%",
+        width: "100%",
         delay: 0.1,
         duration: 0.5,
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".students-features",
           scrub: true,
+          start: "100% center",
+          end: "300% center",
+        },
+      });
+
+      gsap.to(questionContainers, {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        delay: 0.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: "#faq",
+          scrub: 0.2,
+          stagger: 0.9,
           start: "top center",
-          end: "400% center",
+          end: "50% center",
+        },
+      });
+
+      gsap.to(".section-title-card", {
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
+        delay: 0.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: "#faq",
+          scrub: 0.1,
+          start: "top center",
+          end: "50% center",
         },
       });
 
@@ -739,15 +1086,13 @@
 
                 if (count < target) {
                   count++;
-                  count.innetText = count;
+                  counter.textContent = count.toFixed(3);
                   setTimeout(updateCount, 10);
                 } else {
-                  counter.innerText = target;
+                  counter.textContent = target.toFixed(3);
                 }
               }
-
               updateCount();
-
               activated = true;
             });
           } else if (
@@ -758,13 +1103,28 @@
             (pageYOffset === 0 && activated)
           ) {
             counters.forEach((counter) => {
-              counter.innerText = 0;
+              counter.textContent = 0;
             });
             activated = false;
           }
 
           lastScrollTop = scrollTop;
         });
+      });
+
+      $(".question-header").on("click", function () {
+        if ($(this).parent().hasClass("open")) {
+          $(this).parent().removeClass("open");
+        } else {
+          const allDropdownmenus = document.querySelectorAll(
+            ".question-container"
+          );
+
+          allDropdownmenus.forEach((dropdownMenu) => {
+            dropdownMenu.classList.remove("open");
+          });
+          $(this).parent().addClass("open");
+        }
       });
     </script>
   </body>

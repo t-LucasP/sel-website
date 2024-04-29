@@ -1,10 +1,11 @@
 .fire-wrapper {
-  left: 50%;
+  right: -500px;
   position: absolute;
   top: 50%;
   transform-origin: top center;
   transform: translate(-50%, 0) rotate3d(1, 0, 0, 60deg);
   width: 3.5rem;
+  height: 100%;
 }
 
 .fire {
@@ -128,7 +129,7 @@
 
 #canvas {
   position: absolute;
-  right: 0;
+  right: -500px;
   width: fit-content;
 }
 

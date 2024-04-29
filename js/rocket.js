@@ -50,7 +50,7 @@ const createScene = () => {
   loader.load("../assets/gltf/rocket.gltf", (gltf) => {
     rocket = gltf.scene;
     rocket.position.y = 50;
-    rocket.position.x = 300;
+    // rocket.position.x = 300;
     scene.add(rocket);
   });
 };
