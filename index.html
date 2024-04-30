@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/rocket.css" />
     <link rel="stylesheet" href="./css/paperplane.css" />
     <link rel="stylesheet" href="./css/styles.css" />
@@ -72,7 +73,7 @@
           </div>
           <div class="aboutus-main-content">
             <div class="aboutus-main-content-text">
-              <div class="general-overview about-section">
+              <div class="general-overview about-section" data-aos="fade-left">
                 <h4>Visão geral</h4>
                 <p>
                   Somos uma instituição dedicada ao desenvolvimento, capacitação
@@ -83,7 +84,7 @@
                   Educacional.
                 </p>
               </div>
-              <div class="mission about-section">
+              <div class="mission about-section" data-aos="fade-left">
                 <h4>Missão</h4>
                 <p>
                   Na SEL, nossa missão é facilitar o uso eficaz da tecnologia na
@@ -91,7 +92,7 @@
                   engajador.
                 </p>
               </div>
-              <div class="mission about-section">
+              <div class="mission about-section" data-aos="fade-left">
                 <h4>Compromisso</h4>
                 <p>
                   Na Educar/SEL Brasil, integramos tecnologia e educação para
@@ -103,24 +104,25 @@
             <img
               src="./assets/images/tech-and-educ.jpg"
               alt="Imagem de uma garota utilizando tecnologia de realizade aumentada"
+              data-aos="zoom-out"
             />
           </div>
           <div class="plus-about-section">
-            <div class="divide-section-title">
+            <div class="divide-section-title" data-aos="fade-up">
               <div class="divider-left-line divider"></div>
               <h6>Por que se juntar a nós</h6>
               <div class="divider-right-line divider"></div>
             </div>
             <div class="plus-section-main-content">
-              <div class="plus-section-card">
+              <div class="plus-section-card" data-aos="flip-up">
                 <span class="plus-section-number stroke-text">1</span>
                 <span>Desenvolvimento de Portal de Conteúdos Pedagógicos </span>
               </div>
-              <div class="plus-section-card">
+              <div class="plus-section-card" data-aos="flip-up">
                 <span class="plus-section-number stroke-text">2</span>
                 <span>Consultoria em Tecnologia Educacional </span>
               </div>
-              <div class="plus-section-card">
+              <div class="plus-section-card" data-aos="flip-up">
                 <span class="plus-section-number stroke-text">3</span>
                 <span>Implementação de Sala de Aula Interativa </span>
               </div>
@@ -191,74 +193,77 @@
           </ul>
         </div>
       </section>
-      <div class="features">
-        <div class="banners-wrapper">
-          <div class="features-banners-container">
-            <input type="radio" name="slide" id="c1" checked />
-            <label for="c1" class="feature-card">
-              <div class="feature-row">
-                <div class="feature-icon">1</div>
-                <div class="description">
-                  <h5>Intervenção pedagógica com IA</h5>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  </p>
+      <section id="features-section">
+        <div class="features">
+          <div class="banners-wrapper">
+            <div class="features-banners-container">
+              <input type="radio" name="slide" id="c1" checked />
+              <label for="c1" class="feature-card">
+                <div class="feature-row">
+                  <div class="feature-icon">1</div>
+                  <div class="description">
+                    <h5>Intervenção pedagógica com IA</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </label>
-            <input type="radio" name="slide" id="c2" />
-            <label for="c2" class="feature-card">
-              <div class="feature-row">
-                <div class="feature-icon">2</div>
-                <div class="description">
-                  <h5>Ensino adaptativo integrado com IA</h5>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  </p>
+              </label>
+              <input type="radio" name="slide" id="c2" />
+              <label for="c2" class="feature-card">
+                <div class="feature-row">
+                  <div class="feature-icon">2</div>
+                  <div class="description">
+                    <h5>Ensino adaptativo integrado com IA</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </label>
-            <input type="radio" name="slide" id="c3" />
-            <label for="c3" class="feature-card">
-              <div class="feature-row">
-                <div class="feature-icon">3</div>
-                <div class="description">
-                  <h5>Trilhas adaptativas</h5>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  </p>
+              </label>
+              <input type="radio" name="slide" id="c3" />
+              <label for="c3" class="feature-card">
+                <div class="feature-row">
+                  <div class="feature-icon">3</div>
+                  <div class="description">
+                    <h5>Trilhas adaptativas</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </label>
-            <input type="radio" name="slide" id="c4" />
-            <label for="c4" class="feature-card">
-              <div class="feature-row">
-                <div class="feature-icon">4</div>
-                <div class="description">
-                  <h5>Relatórios gerenciais</h5>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  </p>
+              </label>
+              <input type="radio" name="slide" id="c4" />
+              <label for="c4" class="feature-card">
+                <div class="feature-row">
+                  <div class="feature-icon">4</div>
+                  <div class="description">
+                    <h5>Relatórios gerenciais</h5>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </label>
+              </label>
+            </div>
+          </div>
+          <div id="features-content">
+            <h3 class="features-text-title">Soluções</h3>
+            <b class="features-text-default-texts"
+              >A SEL oferece um conjuto completo de soluções para elevar a
+              <i>educação</i> à um outro nível
+            </b>
+            <span class="features-text-default-texts"
+              >Revitalize o ensino com nossas soluções tecnológicas
+              educacionais, projetadas para inspirar e capacitar alunos em
+              qualquer lugar. Desde a sala de aula até o ensino remoto,
+              oferecemos ferramentas inovadoras para promover um aprendizado
+              envolvente e colaborativo, moldando o futuro da educação</span
+            >
           </div>
         </div>
-        <div id="features-content">
-          <h3 class="features-text-title">Soluções</h3>
-          <b class="features-text-default-texts"
-            >A SEL oferece um conjuto completo de soluções para elevar a
-            <i>educação</i> à um outro nível
-          </b>
-          <span class="features-text-default-texts"
-            >Revitalize o ensino com nossas soluções tecnológicas educacionais,
-            projetadas para inspirar e capacitar alunos em qualquer lugar. Desde
-            a sala de aula até o ensino remoto, oferecemos ferramentas
-            inovadoras para promover um aprendizado envolvente e colaborativo,
-            moldando o futuro da educação</span
-          >
-        </div>
-      </div>
+      </section>
+
       <div id="solutions" class="container">
         <div class="first-description panel">
           <div class="panel-content">
@@ -267,7 +272,7 @@
             </h3>
             <div class="parents-features-cards">
               <div class="left-cards cards-wrapper">
-                <div class="parent-card">
+                <div class="parent-card" data-aos="fade-up">
                   <h4>Recursos</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -278,7 +283,7 @@
                   >
                   <img src="./assets/images/gif-example.webp" />
                 </div>
-                <div class="parent-card">
+                <div class="parent-card" data-aos="fade-up">
                   <h4>Atividades</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -291,7 +296,7 @@
                 </div>
               </div>
               <div class="right-cards cards-wrapper">
-                <div class="parent-card">
+                <div class="parent-card" data-aos="fade-up">
                   <h4>Comunicação</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -302,7 +307,7 @@
                   >
                   <img src="./assets/images/gif-example.webp" />
                 </div>
-                <div class="parent-card">
+                <div class="parent-card" data-aos="fade-up">
                   <h4>Formação</h4>
                   <span
                     >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -493,7 +498,7 @@
           <div class="evolution-numbers-container">
             <div class="evolution-number">
               <img src="./assets/images/icon01.png" />
-              <span id="counter01" class="counter" data-count="5.500"></span>
+              <span id="counter01" class="counter" data-stop="5500">5.500</span>
               <span>recursos digitais</span>
             </div>
             <div class="evolution-number">
@@ -824,45 +829,97 @@
           </div>
         </div>
       </div>
-      <div id="help">
-        <div class="help-content">
-          <span class="help-span"
-            >Não encontrou o que procurava? <br />Fale com nossos especialistas
-            e tire todas as suas dúvidas!</span
-          >
-          <button class="help-button">Fale com os especialistas</button>
+      <section id="contact">
+        <div class="contact-content">
+          <div class="contact-left-content">
+            <span>Fale conosco</span>
+            <h2>
+              Entre em contato e tire todas as suas dúvidas sobre nossas
+              soluções
+            </h2>
+          </div>
+          <div class="contact-form-container">
+            <h6>Entre em contato</h6>
+            <form id="contact-form">
+              <fieldset>
+                <div class="form-section">
+                  <div class="input-wrapper">
+                    <img
+                      src="./assets/images/icons/20px/user.svg"
+                      loading="lazy"
+                    />
+                    <input type="text" placeholder="Digite seu nome" />
+                  </div>
+                </div>
+                <div class="form-section">
+                  <div class="input-wrapper">
+                    <img
+                      src="./assets/images/icons/20px/mail.svg"
+                      loading="lazy"
+                    />
+                    <input type="email" placeholder="Digite seu email" />
+                  </div>
+                </div>
+                <div class="form-section">
+                  <div class="input-wrapper">
+                    <img
+                      src="./assets/images/icons/20px/phone.svg"
+                      loading="lazy"
+                    />
+                    <input type="text" placeholder="Seu número de telefone" />
+                  </div>
+                </div>
+                <div class="form-section terms">
+                  <div class="accept-terms">
+                    <input type="checkbox" />
+                    <span
+                      >Concordo com os <a href="#">Termos</a> e a
+                      <a href="#">Política de Privacidade</a></span
+                    >
+                  </div>
+                </div>
+              </fieldset>
+              <div class="contact-form-buttons">
+                <button type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
       <footer>
         <div class="footer-content">
-          <div class="footer-logo">LOGO</div>
+          <div class="footer-logo">SEL</div>
+          <div class="footer-action-buttons">
+            <button class="backtop" onclick="topFunction()">
+              <span>Voltar ao topo</span
+              ><img
+                src="./assets/images/icons/32px/caretup.svg"
+                alt="Ícone de seta para cima, para voltr ao topo da página"
+              />
+            </button>
+          </div>
         </div>
       </footer>
     </main>
     <!-- External libraries: jQuery & GreenSock -->
     <script src="./js/layerslider/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     <script src="https://unpkg.com/three@0.123.0/build/three.min.js"></script>
     <script src="https://unpkg.com/three@0.123.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/rocket.js"></script>
     <script src="./js/marquee-animation.js"></script>
+    <script src="./js/utils.js"></script>
     <!-- External libraries: jQuery & GreenSock -->
     <script>
-      const lenis = new Lenis();
-
-      lenis.on("scroll", (e) => {});
-
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-
-      requestAnimationFrame(raf);
+      AOS.init({
+        duration: 1200,
+      });
 
       function toggleMenu() {
         var x = document.getElementById("myNavbar");
@@ -871,6 +928,11 @@
         } else {
           x.className = "navbar";
         }
+      }
+
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
 
       function changeDashboardContent(e) {
@@ -892,7 +954,6 @@
         ".main-banner-text .word"
       );
       let sections = gsap.utils.toArray(".panel");
-      let parentCards = gsap.utils.toArray(".parent-card");
       const horizontalContainer = document.querySelector(".container");
       const formationCards = gsap.utils.toArray(".right-side-images-card");
       const featuresTexts = gsap.utils.toArray(".features-text-default-texts");
@@ -966,21 +1027,6 @@
         },
       });
 
-      gsap.to(parentCards, {
-        y: 0,
-        opacity: 1,
-        ease: "power2.out",
-        stagger: 0.5,
-        delay: 0.1,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".first-description panel",
-          scrub: 0.1,
-          start: "100% center",
-          end: "bottom center",
-        },
-      });
-
       gsap.to(formationCards, {
         y: 0,
         ease: "power2.out",
@@ -992,32 +1038,6 @@
           scrub: 0.1,
           start: "-100% center",
           end: "70% center",
-        },
-      });
-
-      gsap.to(".help-span", {
-        opacity: 1,
-        scale: 1,
-        delay: 0.2,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".help-content",
-          scrub: 0.1,
-          start: "top center",
-          end: "bottom center",
-        },
-      });
-
-      gsap.to(".help-button", {
-        opacity: 1,
-        x: 0,
-        delay: 0.2,
-        duration: 0.5,
-        scrollTrigger: {
-          trigger: ".help-content",
-          scrub: 0.1,
-          start: "top center",
-          end: "bottom center",
         },
       });
 
@@ -1047,20 +1067,6 @@
           start: "top center",
           end: "30% center",
           stagger: 0.9,
-        },
-      });
-
-      gsap.from(".video-container", {
-        y: "100px",
-        opacity: 0,
-        delay: 0.1,
-        duration: 0.5,
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: ".video-section",
-          scrub: true,
-          start: "top center",
-          end: "bottom center",
         },
       });
 
@@ -1120,6 +1126,9 @@
 
         $(window).scroll((event) => {
           const scrollTop = $(this).scrollTop();
+          const isCounterInView = isScrolledIntoView(
+            document.getElementById("evolution")
+          );
 
           if (height > 1322) {
             if (scrollTop > lastScrollTop) {
@@ -1134,45 +1143,6 @@
               $(".main-header").css("top", "0");
             }
           }
-
-          if (
-            pageYOffset >
-              countersContainer.offsetTop - container.offsetHeight - 200 &&
-            !activated
-          ) {
-            counters.forEach((counter) => {
-              counter.innerText = 0;
-
-              let count = 0;
-
-              function updateCount() {
-                const target = parseInt(counter.dataset.count);
-
-                if (count < target) {
-                  count++;
-                  counter.textContent = count.toFixed(3);
-                  setTimeout(updateCount, 10);
-                } else {
-                  counter.textContent = target.toFixed(3);
-                }
-              }
-              updateCount();
-              activated = true;
-            });
-          } else if (
-            pageYOffset <
-              countersContainer.offsetTop -
-                countersContainer.offsetHeight -
-                500 ||
-            (pageYOffset === 0 && activated)
-          ) {
-            counters.forEach((counter) => {
-              counter.textContent = 0;
-            });
-            activated = false;
-          }
-
-          lastScrollTop = scrollTop;
         });
       });
 
