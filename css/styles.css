@@ -8,6 +8,16 @@
   text-rendering: optimizeLegibility;
 }
 
+:root {
+  --marquee-width: 80vw;
+  --marque-height: 20vh;
+  --marquee-elements-displayed: 5;
+  --marquee-element-width: calc(
+    var(--marquee-width) / var(--marquee-elements-displayed) - 150px
+  );
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -1443,6 +1453,80 @@ main {
   gap: 24px;
 }
 
+#marquee-section {
+  width: 100vw;
+  height: auto;
+  padding: 32px 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#marquee-section .marquee-section-title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.marquee {
+  width: var(--marquee-width);
+  max-width: 1290px;
+  height: var(--marque-height);
+  background-color: transparent;
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee::before,
+.marquee::after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, transparent 100%);
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  max-height: 100%;
+  white-space: nowrap;
+  margin: 0 16px;
+  filter: grayscale(0.9);
+}
+
+.marquee-content li img {
+  width: 100%;
+  /* border: 2px solid #eee; */
+}
+
 footer {
   background-color: #1a1a1a;
   width: 100vw;
@@ -1473,6 +1557,17 @@ footer {
   }
 }
 
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-1 * var(--marquee-element-width) * var(--marquee-elements))
+    );
+  }
+}
+
 @keyframes textShine {
   0% {
     background-position: 0% 50%;
@@ -1495,6 +1590,21 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  .marquee::before,
+  .marquee::after {
+    width: 5rem;
+  }
+
   .navbar a,
   .dropdown .dropbtn {
     float: none;
