@@ -679,7 +679,7 @@ main {
 .student-card,
 .parent-card {
   width: 400px;
-  height: auto;
+  height: 450px;
   max-height: 500px;
   font-size: 0.75rem;
   background-color: #fff;
@@ -688,7 +688,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
   -webkit-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.35);
@@ -1167,6 +1167,18 @@ input:focus + .input-wrapper {
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
+}
+
+.accept-terms a {
+  color: #29e0a9;
+}
+
+.accept-terms a:visited {
+  color: #8d8d99;
+}
+
+input[type="checkbox"] {
+  accent-color: #29e0a9;
 }
 
 .accept-terms input {
