@@ -114,15 +114,19 @@
               <div class="divider-right-line divider"></div>
             </div>
             <div class="plus-section-main-content">
-              <div class="plus-section-card" data-aos="flip-up">
-                <span class="plus-section-number stroke-text">1</span>
-                <span>Desenvolvimento de Portal de Conteúdos Pedagógicos </span>
+              <div class="plus-section-content">
+                <div class="plus-section-card" data-aos="flip-up">
+                  <span class="plus-section-number stroke-text">1</span>
+                  <span
+                    >Desenvolvimento de Portal de Conteúdos Pedagógicos
+                  </span>
+                </div>
+                <div class="plus-section-card" data-aos="flip-up">
+                  <span class="plus-section-number stroke-text">2</span>
+                  <span>Consultoria em Tecnologia Educacional </span>
+                </div>
               </div>
-              <div class="plus-section-card" data-aos="flip-up">
-                <span class="plus-section-number stroke-text">2</span>
-                <span>Consultoria em Tecnologia Educacional </span>
-              </div>
-              <div class="plus-section-card" data-aos="flip-up">
+              <div class="plus-section-card w-100" data-aos="flip-up">
                 <span class="plus-section-number stroke-text">3</span>
                 <span>Implementação de Sala de Aula Interativa </span>
               </div>
@@ -379,7 +383,7 @@
           <div class="rain rain10"></div>
           <div class="drop drop11"></div>
           <div class="drop drop12"></div>
-          <div id="canvas"></div>
+          <!-- <div id="canvas"></div> -->
         </section>
         <section class="panel dashboard-contents">
           <div class="dashboards-expose-content">
@@ -395,6 +399,7 @@
                 class="next-level-button"
                 onclick="changeDashboardContent(this)"
                 data-content="dashboards"
+                data-aos="zoom-out-right"
               >
                 Dashboards Interativos
               </button>
@@ -402,6 +407,7 @@
                 class="next-level-button"
                 onclick="changeDashboardContent(this)"
                 data-content="reports"
+                data-aos="zoom-out-right"
               >
                 Relatórios
               </button>
@@ -409,6 +415,7 @@
                 class="next-level-button"
                 onclick="changeDashboardContent(this)"
                 data-content="acess"
+                data-aos="zoom-out-right"
               >
                 Gestão de Acessos
               </button>
@@ -416,6 +423,7 @@
                 class="next-level-button"
                 onclick="changeDashboardContent(this)"
                 data-content="unkown"
+                data-aos="zoom-out-right"
               >
                 Gestão de Acessos
               </button>
@@ -525,21 +533,17 @@
           <div class="evolution-numbers-container">
             <div class="evolution-number">
               <img src="./assets/images/icon01.png" />
-              <span id="counter01" class="counter" data-stop="5500">5.500</span>
+              <span id="counter01" class="counter" data-count="5.500">0</span>
               <span>recursos digitais</span>
             </div>
             <div class="evolution-number">
               <img src="./assets/images/icon02.png" />
-              <span id="counter02" class="counter" data-count="140.000"
-                >140.000</span
-              >
+              <span id="counter02" class="counter" data-count="140.000">0</span>
               <span>Materiais disponíveis</span>
             </div>
             <div class="evolution-number">
               <img src="./assets/images/icon03.png" />
-              <span id="counter03" class="counter" data-count="3.200"
-                >3.200</span
-              >
+              <span id="counter03" class="counter" data-count="3.200">0</span>
               <span>Avaliações</span>
             </div>
           </div>
@@ -727,13 +731,13 @@
               Conheça nossos recursos de comunicação
             </button>
           </div>
-          <div class="resolutions-left-side-image">
+          <!-- <div class="resolutions-left-side-image">
             <img
               src="./assets/img-banner.png"
               class="comunication-image"
               data-tilt
             />
-          </div>
+          </div> -->
         </div>
       </div>
       <div id="faq">
@@ -947,7 +951,7 @@
       src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
       type="module"
     ></script>
-    <script src="./js/rocket.js"></script>
+    <!-- <script src="./js/rocket.js"></script> -->
     <script src="./js/marquee-animation.js"></script>
     <script src="./js/utils.js"></script>
     <!-- External libraries: jQuery & GreenSock -->
@@ -994,10 +998,28 @@
       const featuresTexts = gsap.utils.toArray(".features-text-default-texts");
       const featuresCards = gsap.utils.toArray(".feature-card");
       const splitTypes = document.querySelectorAll(".text-reveal");
-      const counters = document.querySelectorAll(".counter");
       const countersContainer = document.querySelector(".evolution-content");
       const questionContainers = gsap.utils.toArray(".question-container");
       let activated = false;
+
+      $(".counter").each(function (index, element) {
+        var count = $(this),
+          zero = { val: 0 },
+          num = count.data("count"),
+          split = (num + "").split("."),
+          decimals = split.length > 1 ? split[1].length : 0;
+
+        gsap.to(zero, {
+          val: num,
+          duration: 2,
+          scrollTrigger: {
+            trigger: element,
+          },
+          onUpdate: function () {
+            count.text(zero.val.toFixed(decimals));
+          },
+        });
+      });
 
       splitTypes.forEach((char, i) => {
         const splitTypeText = new SplitType(char, {

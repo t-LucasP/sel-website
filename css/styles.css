@@ -1220,6 +1220,24 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+#faq::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: radial-gradient(
+      circle closest-corner at 50% 50%,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(151, 151, 151, 0.5) 150%
+    ),
+    url("../assets/images/ask.jpg") center/cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  filter: grayscale(1.1);
 }
 
 .faq-container {
@@ -1340,7 +1358,7 @@ input[type="checkbox"] {
   max-width: 1290px;
   background-color: rgb(18 18 20/1);
   border-radius: 8px;
-  padding: 24px 16px;
+  padding: 24px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1456,17 +1474,33 @@ input[type="checkbox"] {
   align-items: center;
   justify-content: space-between;
   padding: 8px 16px;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.plus-section-content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
 }
 
 .plus-section-card {
-  width: 400px;
+  width: 50%;
   background-color: rgb(9 9 10 / 1);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   max-height: 100px;
   height: 100px;
+  gap: 24px;
+}
+
+.w-100 {
+  width: 100% !important;
+  justify-content: center;
 }
 
 .plus-section-card span:last-child {

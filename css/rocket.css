@@ -129,7 +129,7 @@
 
 #canvas {
   position: absolute;
-  right: -500px;
+  left: -500px;
   width: fit-content;
 }
 
